@@ -19,10 +19,16 @@ APP_ID=
 # The API_TOKEN is located in HockeyApp's Account Settings > API Tokens
 API_TOKEN=
 
+# The TEAMID parameter restricts app downloads to those registered on the given team. 
+# You can find your team's Database ID in HockeyApp by navigating to Teams from the Dashboard and clicking on your team.
+# You can find your id in the url. 
+TEAMID= 
+
 # Push to HockeyApp [Additional API parameters: http://support.hockeyapp.net/kb/api/api-apps#upload-app]
 response=$(curl \
   -F "status=2" \
   -F "notify=1" \
+  -F "teams=$TEAMID" \
   -F "notes=Version v$current_tag" \
   -F "ipa=@./platforms/ios/build/$APP_FILE""_v$current_tag.ipa" \
   -H "X-HockeyAppToken:$API_TOKEN" \

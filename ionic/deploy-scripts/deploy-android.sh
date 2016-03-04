@@ -13,10 +13,16 @@ API_TOKEN=
 # APP_FILE should match the desired apk file in platforms/android/build/outputs/apk. 
 APP_FILE="Ionic App"
 
+# The TEAMID parameter restricts app downloads to those registered on the given team. 
+# You can find your team's Database ID in HockeyApp by navigating to Teams from the Dashboard and clicking on your team.
+# You can find your id in the url. 
+TEAMID= 
+
 # push the app to HockeyApp [Additional API parameters: http://support.hockeyapp.net/kb/api/api-apps#upload-app]
 response=$(curl \
   -F "status=2" \
   -F "notify=1" \
+  -F "teams=$TEAMID" \
   -F "notes=Version v$current_tag" \
   -F "version=$current_tag" \
   -F "shortversion=0.1.$current_tag" \

@@ -113,10 +113,17 @@ Fork the project template from Github and install the following:
 - We are using Hockeyapp to distribute builds to approved devices. 
 - Create a HockeyApp [account] (https://rink.hockeyapp.net/registrations/new).
 - Request an invitation to the Cohaesus HockeyApp account (See Richard Bundock).
-- Follow the instructions to [add your devices to your profile] (http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/adding-new-devices-to-your-provisioning-profile). 
+ 
 - Create a New App for each platform from the HockeyApp Dashboard (select create the app manually).
 - The Bundle Identifier (iOS) / Package Name (Android) must match the __widget id__ in your __config.xml__ file. 
 - Collect the App ID (located by selecting the app from the dashboard) and [generate an API token] (https://rink.hockeyapp.net/manage/auth_tokens) for your app. Assign the values to the respective variables in the deploy-scripts folder.
+
+
+### Adding an Device
+- You can add a device to your HockeyApp by accessing [Devices] (https://rink.hockeyapp.net/manage/devices) from the Dashboard.
+- Select _Guided Process_.
+- HockeyApp will generate a link for you to access on your mobile device. 
+- Accessing    
 
 ### Distribution (__important__)
 - Select _Manage App_ inside your newly-created app. From there, navigate to _Distribution_ and set the Download page to __private__. This ensures anyone with the URL and anyone whose UDID is in the provisioning profile will not be able to access and download the app. 

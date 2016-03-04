@@ -40,27 +40,3 @@ angular.module('starter.controllers', ['ionic'])
     }, 1000);
   };
 })
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.developers = [
-    { title: 'Frontend', id: 1 },
-    { title: '.Net', id: 2 },
-    { title: 'Mobile', id: 3 },
-    { title: 'PHP', id: 4 },
-    { title: 'Wordpress', id: 5 }
-  ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
-
-.controller('FormCtrl', function($scope ,Employee) {
-    $scope.signIn = function(employee) {
-
-      console.log(employee);
-      if (true /* TODO: Add validation condition */){
-
-        Employee.create(employee);
-      }
-  }; 
-})
