@@ -119,7 +119,7 @@ Fork the project template from Github and install the following:
 - Collect the App ID (located by selecting the app from the dashboard) and [generate an API token] (https://rink.hockeyapp.net/manage/auth_tokens) for your app. Assign the values to the respective variables in the deploy-scripts folder.
 
 ### Adding a Device
-- You can add a device to your HockeyApp by accessing [Devices] (https://rink.hockeyapp.net/manage/devices) from the Dashboard.
+- You can add a device to your HockeyApp profile by accessing [Devices] (https://rink.hockeyapp.net/manage/devices) from the Dashboard.
 - Select _Guided Process_.
 - HockeyApp will generate a link for you to access on your mobile device. 
 - Accessing this link from your mobile device will add it to either your profile's provisioned or unprovisioned devices, depending on whether your device has been provisioned on the account you used to generate the platform file.
