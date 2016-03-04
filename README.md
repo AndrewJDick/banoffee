@@ -71,7 +71,7 @@ Fork the project template from Github and install the following:
 ## CSS Framework
 ### SASS
 - SASS structure is based on [Inverted Triangle CSS] (http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) (ITCSS), courtesy of Harry Roberts.
-- It is important that you load in any files your create in the correct order in the main.scss file. 
+- It is important that you import any files you create in the main.scss file are imported in the correct order. 
 - Each folder contains a readme.md file, which explains the expected content.
 
 ### Bootstrap CSS
