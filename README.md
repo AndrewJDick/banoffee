@@ -3,14 +3,15 @@
 
 ## Initial Setup
 Ensure the following are installed and up to date:
-- [__homebrew__] (http://brew.sh/)
 - [__node / npm__] (https://nodejs.org/en/download/)
 - [__xcode__] (https://developer.apple.com/xcode/download/)
 
 Fork the project template from Github and install the following:
-- `$ sudo npm install -g gulp bower cucumber cordova ionic strongloop ios-sim ios-deploy`.
+- `$ sudo npm install -g bower cucumber cordova gulp ionic ios-deploy ios-sim strongloop`.
 - `$ sudo npm install`. This will grab all of the project dependencies.
 - `$ gulp`. Running the default task from the Ionic directory will generate your `ionic/www/dist` folder.
+
+
 
 
 ## Configure Platforms
@@ -37,6 +38,8 @@ Fork the project template from Github and install the following:
 	- Update the PATH inside the file, e.g. `export PATH=${PATH}:/Users/<COHAESUSEMPLOYEE>/Development/android-sdk-macosx/platform-tools:/Users/<COHAESUSEMPLOYEE>/Development/android-sdk-macosx/tools`. Make sure this path matches your *bash_profile* location. 
 - Execute `$ source ~/.bash_profile` in the terminal.
 - `$ ionic platform add android`.
+
+
 
 
 ## Emulation
@@ -68,6 +71,8 @@ Fork the project template from Github and install the following:
 - Emulate the build (with your device open in Genymotion) `$ ionic run android `.
 
 
+
+
 ## CSS Framework
 ### SASS
 - SASS structure is based on [Inverted Triangle CSS] (http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) (ITCSS), courtesy of Harry Roberts.
@@ -80,6 +85,8 @@ Fork the project template from Github and install the following:
 
 ### CSS
 - We have left in a default _style.css_ in the `www/css` folder if you choose not to use SASS. You do not have to make any changes to the _index.html_ file, since _style.css_ is already imported into `scss/main.scss`. Note that all SASS files will overwrite the style.css stylesheet.
+
+
 
 
 ## Javascript 
@@ -97,6 +104,8 @@ Fork the project template from Github and install the following:
 - `$ gulp scripts` Uses [browserify] (https://www.npmjs.com/package/gulp-browserify) to pull all JS files declared in your single-point entry (and their associated depandancies) and [annotates] (https://www.npmjs.com/package/gulp-ng-annotate) them. It then generates your `www/dist/js/app.js` and an [uglified] (https://www.npmjs.com/package/gulp-uglify) `www/dist/js/app.min.js` file. 
 - `$ gulp sass` Compiles all Sass/CSS files declared in `scss/main.scss`, then generates the `www/dist/css/main.css` and a [minified] (https://www.npmjs.com/package/gulp-minify-css)`www/dist/css/main.min.css`.
 - `$ gulp deploy-Android` / `$ gulp deploy-iOS` Increments the build version (using git tags), generates a new platform build, deploys it to HockeyApp, and publishes the build information in your HipChat project room. 
+
+
 
 
 ## HockeyApp
@@ -161,6 +170,8 @@ Fork the project template from Github and install the following:
 	- (we reccomend postgreSQL, as it is easier to manipulate the data structure of relational databases as you go along.)
 
 
+
+
 ## Testing
 For Testing we are using the following:
 - [gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin): for BDD to write in human-readable language (especially useful for non-techies)
@@ -174,6 +185,9 @@ For Testing we are using the following:
 3. run `gulp cucumber`, you could also run `cucumber.js`
 4. then copy the gherkin converted js code and paste it into the JS file you created in step_definitions, now you can add your assertions etc.
 
-# Database
+
+
+
+## Database
 - PostgreSQL + pg (npm package) + knex (query builder)
 - MongoDB + Mongoose
