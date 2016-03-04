@@ -122,7 +122,7 @@ Fork the project template from Github and install the following:
 - You can add a device to your HockeyApp by accessing [Devices] (https://rink.hockeyapp.net/manage/devices) from the Dashboard.
 - Select _Guided Process_.
 - HockeyApp will generate a link for you to access on your mobile device. 
-- Accessing this link from your mobile device will add it to either your profile's provisioned or unprovisioned devcies, depending on whether your device has been provisioned on the account you used to generate the platform file.
+- Accessing this link from your mobile device will add it to either your profile's provisioned or unprovisioned devices, depending on whether your device has been provisioned on the account you used to generate the platform file.
 - You can add uprovisioned devices to your provisioning profile by following [these instructions] (http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/adding-new-devices-to-your-provisioning-profile).
 
 ### Distribution (__important__)
