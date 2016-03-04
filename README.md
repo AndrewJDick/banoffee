@@ -14,9 +14,8 @@ Fork the project template from Github and install the following:
 
 
 ## Configure Platforms
-
 - Amend the __"widget id"__ in your __config.xml__ file. It must follow the following standard: 
-	`com.company.projectname` (e.g. com.cohaesus.onboardapp)
+	- `com.company.projectname` (e.g. com.cohaesus.onboardapp)
 
 ### iOS 
 - Ensure Xcode is up to date.
@@ -69,6 +68,36 @@ Fork the project template from Github and install the following:
 - Emulate the build (with your device open in Genymotion) `$ ionic run android `.
 
 
+## CSS Framework
+### SASS
+- SASS structure is based on [Inverted Triangle CSS] (http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) (ITCSS), courtesy of Harry Roberts.
+- It is important that you load in any files your create in the correct order in the main.scss file. 
+- Each folder contains a readme.md file, which explains the expected content.
+
+### Bootstrap CSS
+- The Bootstrap CSS library is a listed dependancy of the angular-ui-bootstrap module, so you also have access to the [Bootstrap CSS library] (http://getbootstrap.com/css/).
+- An example jumbotron class has been included in `www/templates/search.html`.
+
+### CSS
+- We have left in a default style.css in the www folder if you do not wish to use SASS.
+
+
+## Javascript 
+### Angular-UI-Bootstrap
+- We have installed Bootstrap components written in pure AngularJS. You can view the documentation [here] (https://angular-ui.github.io/bootstrap/).
+- An example accordion has been included in `www/templates/search.html`.
+
+### Browserify 
+- We are using gulp-browserify to generate a single (minified) Javascript file that is referenced in index.html. 
+- If you create any additional Javascript files, declare the file path at the top the page on `www/app.js` (referenced elsewhere as our single entry point), and add any modular dependancies to the Angular _'starter'_ module.
+
+### Gulp Tasks
+- `$ gulp` Default task. Runs the `$ gulp sass` and `$ gulp scripts` tasks.
+- `$ gulp scripts` Uses [browserify] (https://www.npmjs.com/package/gulp-browserify) to pull all JS files declared in your single-point entry (and their associated depandancies) and [annotates] (https://www.npmjs.com/package/gulp-ng-annotate) them. It then generates your `www/dist/js/app.js` and an [uglified] (https://www.npmjs.com/package/gulp-uglify) `www/dist/js/app.min.js` file. 
+- `$ gulp sass` Compiles all Sass/CSS files declared in `scss/main.scss`, then generates the `www/dist/css/main.css` and a [minified] (https://www.npmjs.com/package/gulp-minify-css)`www/dist/css/main.min.css` file.
+- `$ gulp deploy-Android` / `$ gulp deploy-iOS` Increments the build version (using git tags), generates a new platform build, deploys it to HockeyApp, and publishes the build information in your HipChat project room. 
+
+
 ## HockeyApp
 ### Setup
 - We are using Hockeyapp to distribute builds to approved devices. 
@@ -113,34 +142,7 @@ Fork the project template from Github and install the following:
 1. Run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
 
 
-## CSS Framework
-### SASS
-- SASS structure is based on [Inverted Triangle CSS] (http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) (ITCSS), courtesy of Harry Roberts.
-- It is important that you load in any files your create in the correct order in the main.scss file. 
-- Each folder contains a readme.md file, which explains the expected content.
 
-### Bootstrap CSS
-- The Bootstrap CSS library is a listed dependancy of the angular-ui-bootstrap module, so you also have access to the [Bootstrap CSS library] (http://getbootstrap.com/css/).
-- An example jumbotron class has been included in `www/templates/search.html`.
-
-### CSS
-- We have left in a default style.css in the www folder if you do not wish to use SASS.
-
-
-## Javascript 
-### Angular-UI-Bootstrap
-- We have installed Bootstrap components written in pure AngularJS. You can view the documentation [here] (https://angular-ui.github.io/bootstrap/).
-- An example accordion has been included in `www/templates/search.html`.
-
-### Browserify 
-- We are using gulp-browserify to generate a single (minified) Javascript file that is referenced in index.html. 
-- If you create any additional Javascript files, declare the file path at the top the page on `www/app.js` (referenced elsewhere as our single entry point), and add any modular dependancies to the Angular _'starter'_ module.
-
-### Gulp Tasks
-- `$ gulp` Default task. Runs the `$ gulp sass` and `$ gulp scripts` tasks.
-- `$ gulp scripts` Uses [browserify] (https://www.npmjs.com/package/gulp-browserify) to pull all JS files declared in your single-point entry (and their associated depandancies) and [annotates] (https://www.npmjs.com/package/gulp-ng-annotate) them. It then generates your `www/dist/js/app.js` and an [uglified] (https://www.npmjs.com/package/gulp-uglify) `www/dist/js/app.min.js` file. 
-- `$ gulp sass` Compiles all Sass/CSS files declared in `scss/main.scss`, then generates the `www/dist/css/main.css` and a [minified] (https://www.npmjs.com/package/gulp-minify-css)`www/dist/css/main.min.css` file.
-- `$ gulp deploy-Android` / `$ gulp deploy-iOS` Increments the build version (using git tags), generates a new platform build, deploys it to HockeyApp, and publishes the build information in your HipChat project room. 
 
 
 ## API
