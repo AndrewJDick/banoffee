@@ -152,8 +152,11 @@ Fork the project template from Github and install the following:
 - Import your developer profile using the cog, or add your Apple ID using the plus (after accepting the Cohaesus invitation). 
 - Open Xcode. Import the __.xcodeproj__ file generated from `$ ionic build ios`, found in `platforms/ios`.
 - Select Product > Clean.
-- If you experience the following error: _“Missing iOS Distribution signing identity for …”_, [this] (http://stackoverflow.com/questions/32821189/xcode-7-error-missing-ios-distribution-signing-identity-for) should resolve the error.
+- In Xcode, click on your App on the sidebar on the left hand side of the page. 
+- Under _General_, locate _Team_ in the _Identity_ section. 
+- If you can see the following error: _“Missing iOS Distribution signing identity for …”_, click the __Fix this Issue__ button. 
 - Run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
+- If the gulp task still fails, [this] (http://stackoverflow.com/questions/32821189/xcode-7-error-missing-ios-distribution-signing-identity-for) fix should resolve the error. Re-run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
 
 ##### Future Deployment
 1. Run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
