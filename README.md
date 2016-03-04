@@ -79,7 +79,7 @@ Fork the project template from Github and install the following:
 - An example jumbotron class has been included in `www/templates/search.html`.
 
 ### CSS
-- We have left in a default style.css in the www folder if you do not wish to use SASS.
+- We have left in a default `style.css` in the www folder if you do not wish to use SASS. You do not have to make any changes to the *index.html* file, since *style.css* is already imported into the `scss/main.scss` file. Note that all SASS files will overwrite the style.css stylesheet.
 
 
 ## Javascript 
@@ -89,7 +89,8 @@ Fork the project template from Github and install the following:
 
 ### Browserify 
 - We are using gulp-browserify to generate a single (minified) Javascript file that is referenced in index.html. 
-- If you create any additional Javascript files, declare the file path at the top the page on `www/app.js` (referenced elsewhere as our single entry point), and add any modular dependancies to the Angular _'starter'_ module.
+- If you create any additional Javascript files, declare the file path at the top the page on `www/app.js` (referenced elsewhere as our single entry point), and add any modular dependancies to the Angular _'starter'_ module. 
+- This means you only ever need to reference `www/dist/js/app.min.js` in the *index.html* file.
 
 ### Gulp Tasks
 - `$ gulp` Default task. Runs the `$ gulp sass` and `$ gulp scripts` tasks.
