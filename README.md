@@ -142,6 +142,7 @@ Fork the project template from Github and install the following:
 - To use the zipalign command `$ zipalign -v 4 android-release-unsigned.apk <App Name>.apk`, copy the zipalign file from android-sdk-macosx/build-tools and paste in android-sdk-macosx/tools. Only use the zipalign command if are publishing to the Google Play store. 
 
 ##### Future Deployment
+- Commit and push your changes to the repo (New commits are required to increment the build version).
 - Run the deploy-Android Gulp task `$ gulp deploy-Android`.
 
 #### iOS (.ipa)
@@ -159,7 +160,8 @@ Fork the project template from Github and install the following:
 - If the gulp task still fails, [this] (http://stackoverflow.com/questions/32821189/xcode-7-error-missing-ios-distribution-signing-identity-for) fix should resolve the error. Re-run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
 
 ##### Future Deployment
-1. Run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
+- Commit and push your changes to the repo (Commiting is required to increment the build version).
+- Run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
 
 
 
