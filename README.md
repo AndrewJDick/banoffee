@@ -79,7 +79,7 @@ Fork the project template from Github and install the following:
 - An example jumbotron class has been included in `www/templates/search.html`.
 
 ### CSS
-- We have left in a default _style.css_ in the `www/css` folder if you do not wish to use SASS. You do not have to make any changes to the _index.html_ file, since _style.css_ is already imported into the `scss/main.scss` file. Note that all SASS files will overwrite the style.css stylesheet.
+- We have left in a default _style.css_ in the `www/css` folder if you choose not to use SASS. You do not have to make any changes to the _index.html_ file, since _style.css_ is already imported into the `scss/main.scss` file. Note that all SASS files will overwrite the style.css stylesheet.
 
 
 ## Javascript 
