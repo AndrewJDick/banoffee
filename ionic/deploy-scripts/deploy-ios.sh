@@ -5,7 +5,7 @@ current_tag=$(git describe --abbrev=0 --tags)
 echo "Current tag: $current_tag"
 
 # APP_FILE should match the <name> in your config.xml file. 
-APP_FILE="My Ionic App"
+APP_FILE=
 
 # This archives the .xcodeproj file generated from [$ ionic build ios]...
 /usr/bin/xcodebuild archive -project $PWD/platforms/ios/"$APP_FILE".xcodeproj -scheme "$APP_FILE" -archivePath $PWD/platforms/ios/"$APP_FILE"
