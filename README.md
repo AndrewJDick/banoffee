@@ -123,7 +123,7 @@ Fork the project template from Github and install the following:
 - Select _Guided Process_.
 - HockeyApp will generate a link for you to access on your mobile device. 
 - Accessing this link from your mobile device will add it to either your profile's provisioned or unprovisioned devices, depending on whether your device has been provisioned on the account you used to generate the platform file.
-- You can add uprovisioned devices to your provisioning profile by following [these instructions] (http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/adding-new-devices-to-your-provisioning-profile).
+- You can add unprovisioned devices to your provisioning profile by following [these instructions] (http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/adding-new-devices-to-your-provisioning-profile).
 
 ### Distribution (__important__)
 - Select _Manage App_ inside your newly-created app. From there, navigate to _Distribution_ and set the Download page to __private__. This ensures anyone with the URL and anyone whose UDID is in the provisioning profile will not be able to access and download the app. 
