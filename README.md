@@ -40,14 +40,43 @@ Fork the project template from Github and install the following:
 - `$ ionic platform add android`.
 
 
+## Emulation
+### Browser (live reload)
+- In your ionic folder run `$ ionic serve` from the terminal.
+- The Gulp Watch task will automatically run when you use the browser emulation. When changes made to any HTML, CSS, or JavaScript files are saved, Gulp will recompile your dist files and then automatically reload the browser.
+
+### iOS (Mac only)
+#### via Simulator
+- Inside your ionic folder, build the app via the terminal `$ ionic build ios`.
+- Emulate the build `$ ionic emulate ios`.
+
+#### via Connected Device
+- Inside your ionic folder, build the app via the terminal `$ ionic build ios`.
+- `$ ionic run ios --device`.
+
+### Android
+#### via Cordova
+- Make sure [Java for Mac OSX] (http://www.java.com/en/download/mac_download.jsp) and the [Android SDK] (http://developer.android.com/sdk/installing/index.html?pkg=tools) are installed.
+- Configure your Android devices via Tools > Manage AVDs in the Android SDK.
+- Inside your ionic folder, build the app via the terminal `$ ionic build android`.
+- Emulate the build `$ ionic emulate android`.
+
+#### via GenyMotion [recommended]
+- Create and verify a [Genymotion] (https://www.genymotion.com) account.
+- [Download] (https://www.genymotion.com/download/) and install Genymotion.
+- Add your desired devices to the program. Double click a device to launch (alternatively, highlight and press Start).
+- Inside your ionic folder, build the app via the terminal `$ ionic build android`.
+- Emulate the build (with your device open in Genymotion) `$ ionic run android `.
+
+
 ## HockeyApp
 ### Setup
 - We are using Hockeyapp to distribute builds to approved devices. 
 - Create a HockeyApp [account] (https://rink.hockeyapp.net/registrations/new).
 - Request an invitation to the Cohaesus HockeyApp account (See Richard Bundock).
 - Follow the instructions to [add your devices to your profile] (http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/adding-new-devices-to-your-provisioning-profile). 
-- Create New App from the HockeyApp Dashboard (select create the app manually).
-- The Bundle Identifier must match the __widget id__ in your __config.xml__ file. 
+- Create a New App for each platform from the HockeyApp Dashboard (select create the app manually).
+- The Bundle Identifier (iOS) / Package Name (Android) must match the __widget id__ in your __config.xml__ file. 
 - Collect the App ID (located by selecting the app from the dashboard) and [generate an API token] (https://rink.hockeyapp.net/manage/auth_tokens) for your app. Assign the values to the respective variables in the deploy-scripts folder.
 
 ### Distribution (__important__)
@@ -82,35 +111,6 @@ Fork the project template from Github and install the following:
 
 ##### Future Deployment
 1. Run the deploy-iOS Gulp task `$ gulp deploy-iOS`.
-
-
-## Emulation
-### Browser (live reload)
-- In your ionic folder run `$ ionic serve` from the terminal.
-- The Gulp Watch task will automatically run when you use the browser emulation. When changes made to any HTML, CSS, or JavaScript files are saved, Gulp will recompile your dist files and then automatically reload the browser.
-
-### iOS (Mac only)
-#### via Simulator
-- Inside your ionic folder, build the app via the terminal `$ ionic build ios`.
-- Emulate the build `$ ionic emulate ios`.
-
-#### via Connected Device
-- Inside your ionic folder, build the app via the terminal `$ ionic build ios`.
-- `$ ionic run ios --device`.
-
-### Android
-#### via Cordova
-- Make sure [Java for Mac OSX] (http://www.java.com/en/download/mac_download.jsp) and the [Android SDK] (http://developer.android.com/sdk/installing/index.html?pkg=tools) are installed.
-- Configure your Android devices via Tools > Manage AVDs in the Android SDK.
-- Inside your ionic folder, build the app via the terminal `$ ionic build android`.
-- Emulate the build `$ ionic emulate android`.
-
-#### via GenyMotion [recommended]
-- Create and verify a [Genymotion] (https://www.genymotion.com) account.
-- [Download] (https://www.genymotion.com/download/) and install Genymotion.
-- Add your desired devices to the program. Double click a device to launch (alternatively, highlight and press Start).
-- Inside your ionic folder, build the app via the terminal `$ ionic build android`.
-- Emulate the build (with your device open in Genymotion) `$ ionic run android `.
 
 
 ## CSS Framework
