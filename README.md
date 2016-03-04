@@ -79,7 +79,7 @@ Fork the project template from Github and install the following:
 - An example jumbotron class has been included in `www/templates/search.html`.
 
 ### CSS
-- We have left in a default `style.css` in the www folder if you do not wish to use SASS. You do not have to make any changes to the *index.html* file, since *style.css* is already imported into the `scss/main.scss` file. Note that all SASS files will overwrite the style.css stylesheet.
+- We have left in a default _style.css_ in the `www` folder if you do not wish to use SASS. You do not have to make any changes to the _index.html_ file, since _style.css_ is already imported into the `scss/main.scss` file. Note that all SASS files will overwrite the style.css stylesheet.
 
 
 ## Javascript 
@@ -89,13 +89,13 @@ Fork the project template from Github and install the following:
 
 ### Browserify 
 - We are using gulp-browserify to generate a single (minified) Javascript file that is referenced in index.html. 
-- If you create any additional Javascript files, declare the file path at the top the page on `www/app.js` (referenced elsewhere as our single entry point), and add any modular dependancies to the Angular _'starter'_ module. 
-- This means you only ever need to reference `www/dist/js/app.min.js` in the *index.html* file.
+- If you create any additional Javascript files, declare the file path at the top the page on `www/app.js` (referenced elsewhere as our single entry-point), and add any modular dependancies to the Angular _'starter'_ module. 
+- This means you only ever need to reference `www/dist/js/app.min.js` in the _index.html_ file.
 
 ### Gulp Tasks
 - `$ gulp` Default task. Runs the `$ gulp sass` and `$ gulp scripts` tasks.
 - `$ gulp scripts` Uses [browserify] (https://www.npmjs.com/package/gulp-browserify) to pull all JS files declared in your single-point entry (and their associated depandancies) and [annotates] (https://www.npmjs.com/package/gulp-ng-annotate) them. It then generates your `www/dist/js/app.js` and an [uglified] (https://www.npmjs.com/package/gulp-uglify) `www/dist/js/app.min.js` file. 
-- `$ gulp sass` Compiles all Sass/CSS files declared in `scss/main.scss`, then generates the `www/dist/css/main.css` and a [minified] (https://www.npmjs.com/package/gulp-minify-css)`www/dist/css/main.min.css` file.
+- `$ gulp sass` Compiles all Sass/CSS files declared in `scss/main.scss`, then generates the `www/dist/css/main.css` and a [minified] (https://www.npmjs.com/package/gulp-minify-css)`www/dist/css/main.min.css`.
 - `$ gulp deploy-Android` / `$ gulp deploy-iOS` Increments the build version (using git tags), generates a new platform build, deploys it to HockeyApp, and publishes the build information in your HipChat project room. 
 
 
