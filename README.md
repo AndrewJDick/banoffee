@@ -132,7 +132,7 @@ Fork the project template from Github and install the following:
 ### Deployment
 #### Android (.apk)
 ##### Initial Deployment
-- Run $ ionic build --release android
+- Run `$ ionic build --release android`
 - Follow [these instructions](http://ionicframework.com/docs/guide/publishing.html) to generate and sign the .apk file.
 - Executing `$ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000` will generate your keystore file in the directory you executed the command. _.gitignore_ is set to ignore keystore files stored in the ionic folder, if you choose to store it outside of the apk folder. 
 - Sign your app with `$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-release-unsigned.apk alias_name`
